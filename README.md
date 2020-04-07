@@ -19,7 +19,7 @@ In Julia
 
 ```julia
 using Shamir
-poly_production = Poly([1234, 166, 94]
+poly_production = Poly([1234, 166, 94])
 shares = Shamir.construct_shares(poly_production)
 secret = Shamir.reconstruct_secret(shares)
 ```
