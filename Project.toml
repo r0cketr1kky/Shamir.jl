@@ -1,0 +1,16 @@
+name = "Shamir"
+uuid = "e4fe616d-9329-4237-b43f-e8b93a85fd75"
+authors = ["Rakshit Naidu <rakshit.naidu07@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+Polynomials = "f27b6e38-b328-58d1-80ce-0feddd5e7a45"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
