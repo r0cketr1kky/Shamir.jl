@@ -44,6 +44,7 @@ function construct_shares(n, production_poly)
     Create shares of the secret
     
     Parameters:
+    n: Total number of shares
     production_poly : The Polynomial created with the secret
                     to produce secret shares
 """
@@ -57,13 +58,16 @@ function construct_shares(n, production_poly)
     return share
 end
 
-function recover_secret(shares)
+function recover_secret(shares, n, k, p)
 """
     Recover the secret by finding the coefficient of x^0 i.e.
     when the x=0 in the polynomial. 
     
     Parameters:
     shares : An array of shares of the individuals.
+    n : total number of shares
+    k: minimum number of shares required to unravel the secret
+    p: Field number (to restrict the computation space)
 """
     if length(shares) < k
         throw("Need more parties!")
