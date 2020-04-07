@@ -15,7 +15,7 @@ k = 3 #min num of shares
 p = 1613 #field
 prod_poly = Poly(prod_coeffs)
 shares = Shamir.construct_shares(n, prod_poly)
-secret = Shamir.recover_secret(shares, k, p)
+secret = Shamir.recover_secret(shares, n, k, p)
 @test secret == 1234.0
 
 @info "All tests completed"
