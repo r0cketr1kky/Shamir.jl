@@ -1,5 +1,7 @@
 module Shamir
 
+using Polynomials
+
 function l(x, j, k)
 """
     Create a Lagrange basis polynomial
