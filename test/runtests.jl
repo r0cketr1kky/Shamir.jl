@@ -10,8 +10,9 @@ shares = Shamir.construct_shares(n, prod_poly)
 
 @info "Testing Recover secret"
 prod_coeffs = [1234, 166, 94]
+n = 6
 prod_poly = Poly(prod_coeffs)
-shares = Shamir.construct_shares(prod_poly)
+shares = Shamir.construct_shares(n, prod_poly)
 secret = Shamir.recover_secret(shares)
 @test secret == 1234.0
 
