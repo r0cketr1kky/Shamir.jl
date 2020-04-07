@@ -39,7 +39,7 @@ function L(x, y, k)
     return sum(s)
 end
 
-function construct_shares(production_poly)
+function construct_shares(n, production_poly)
 """
     Create shares of the secret
     
