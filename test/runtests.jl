@@ -14,7 +14,7 @@ n = 6
 k = 3
 prod_poly = Poly(prod_coeffs)
 shares = Shamir.construct_shares(n, prod_poly)
-secret = Shamir.recover_secret(shares)
+secret = Shamir.recover_secret(k, shares)
 @test secret == 1234.0
 
 @info "All tests completed"
