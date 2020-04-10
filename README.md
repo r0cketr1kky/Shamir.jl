@@ -18,8 +18,9 @@ Pkg.add("Shamir")
 In Julia
 
 ```julia
-using Shamir
+using Shamir, Polynomials
+n = 6
 poly_production = Poly([1234, 166, 94])
-shares = Shamir.construct_shares(poly_production)
+shares = Shamir.construct_shares(n, poly_production)
 secret = Shamir.reconstruct_secret(shares)
 ```
