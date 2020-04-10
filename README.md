@@ -19,8 +19,10 @@ In Julia
 
 ```julia
 using Shamir, Polynomials
-n = 6
+n = 6 #total number of parties
+k = 3 #min num of shares
+p = 1613 #field
 poly_production = Poly([1234, 166, 94])
 shares = Shamir.construct_shares(n, poly_production)
-secret = Shamir.reconstruct_secret(shares)
+secret = Shamir.recover_secret(shares, n, k, p)
 ```
